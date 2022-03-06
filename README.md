@@ -31,11 +31,11 @@
     ```
 
 ## OUTPUT
-![Instructions](./Images/Instructions.png)
+![Instructions](./Documentation/Images/Instructions.png)
 ---  
-![Memory and Registers](./Images/Reg%20and%20Mem.png)
+![Memory and Registers](./Documentation/Images/Reg%20and%20Mem.png)
 ---
-![Complete View](./Images/Complete%20View.png) 
+![Complete View](./Documentation/Images/Complete%20View.png) 
 
 ## FEATURES:
 1. Commenting can be done in the assembly file using '#' before the start of the comment
