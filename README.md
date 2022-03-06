@@ -11,7 +11,7 @@
 * [x] Display the contents of the registers, and the memory in the end.
 * [x] Run Bubble Sort written in RISC V instructions.
 * [x] Any programming language can be used. *(programming language used : javascript)*
-* [x] Smulator should support the following RISC-V instructions: ADD/SUB, BNE, JAL(jump),LW/SW
+* [x] Simulator should support the following RISC-V instructions: ADD/SUB, BNE, JAL(jump),LW/SW
 ---
 
 ## USAGE INSTRUCTIONS/ GUIDE
@@ -40,15 +40,28 @@
 ## FEATURES:
 1. Commenting can be done in the assembly file using '#' before the start of the comment
 2. No compulsion for indentation or a specific amount of spacing.
-3. Instructions supported:
-    1. `add`  `sub`
-    2. `lw`  `sw`
-    3. `jal`
-    4. `bne`  `blt`  `beq`  `bge`
-    5. `addi`
-    6. `li`  `la`
-4. Directives supported:
-    1. `.data`
-    2. `.text`
-    3. `.word`
-    4. `.space`
+3. **Instructions supported:**  
+
+    Instruction             | Meaning    |
+    :---------------------- |:---------- |
+    `add rd, rs1, rs1`      |addition: rd=rs1+rs2  |
+    `sub rd, rs1, rs1`      |subtraction: rd=rs1-rs2  |
+    `lw rd, symbol`         |Load word|
+    `sw rd, offset(rs)`     |store word|
+    `jal offset`             |jump and link|
+    `bne  rs, rt, offset`        |branch not equal|
+    `blt  rs, rt, offset`        |branch less than|
+    `beq  rs, rt, offset`        |branch equal|
+    `bge rs, rt, offset`        |branch greater than equal to|
+    `addi rd, immediate`       |add immediate|
+    `li rd, immediate`      |load immediate: rd=immediate|
+    `la rd, symbol`         |Load address|
+    
+4. **Directives supported:**
+    
+    Directive      | Arguments                      | Description
+    :-----------   | :-------------                 | :---------------
+    `.text`        |                                | 
+    `.data`        |                                | used to indicate allocation of predefined memory to certain data
+    `.word`        | expression [, expression]*     | 32-bit comma separated words
+    
