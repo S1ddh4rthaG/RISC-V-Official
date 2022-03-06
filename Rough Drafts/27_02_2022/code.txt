@@ -1,0 +1,21 @@
+# x1 = 4, x7 = 64, x3 = 64; 0x0 = 16, 0x4 = 32, x6=0
+.data
+gap: .space 16
+array: .word 11, 10, 7
+num: .word 4,  #storing integer
+num2: .word 
+
+.text
+add x4, x1, x7 # x4 = 68
+sub x4, x4, x1 # x4 = 64
+
+bne x4, x1, label
+lw x5, 0(x0) # x5 = 16
+sw x5, 0(x1) # 0x4 = 32
+label:
+la x9, num
+lw x8, 0(x9) #x8=4
+la x9, num2
+sw x8, 0(x9) #memory at val stores 4
+li x6, 32 
+addi x6, x6,1 # x6=x6+1

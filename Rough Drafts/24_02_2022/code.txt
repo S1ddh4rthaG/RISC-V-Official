@@ -1,0 +1,6 @@
+label: 
+add x0,x0,x1 #comments
+bne x0, x3, exit
+sub x0, x0, x0
+exit:
+add x4, x0, x0
